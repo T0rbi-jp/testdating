@@ -1,42 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Age Verification</title>
+    <title>A carregar...</title>
     <style>
         body { 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+            margin: 0; 
+            padding: 0;
+            height: 100vh; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
             background: url('https://i.ibb.co/fzNVLbSC/0008bfb4777ad27b5777ea6aa0a713e7.jpg') no-repeat center center fixed; 
             background-size: cover;
-            display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; text-align: center; 
+            font-family: Arial, sans-serif;
         }
-        .container { 
-            position: relative; max-width: 400px; padding: 20px; background: #1a1a1a; 
-            border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); color: #ffffff;
+
+        .loader-container {
+            text-align: center;
         }
-        h2 { margin-bottom: 20px; font-size: 1.4rem; }
-        p { margin-bottom: 30px; color: #ccc; line-height: 1.5; }
-        .btn { display: block; width: 100%; padding: 15px; margin: 10px 0; border: none; border-radius: 8px; font-weight: bold; cursor: pointer; font-size: 1rem; transition: 0.3s; }
-        .btn-yes { background: #e91e63; color: white; }
-        .btn-yes:hover { background: #d81b60; }
-        .btn-no { background: #333; color: #fff; }
+
+        /* Container for the button */
+        .button-box {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 20px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* The rolling border line */
+        .rolling-border {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 5px solid transparent;
+            border-top: 5px solid white;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            box-sizing: border-box;
+        }
+
+        /* The static black background circle and play icon */
+        .play-icon-box {
+            width: 80px;
+            height: 80px;
+            background: #000;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .play-button {
+            width: 0;
+            height: 0;
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            border-left: 25px solid white;
+            margin-left: 5px;
+        }
+
+        .text {
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-top: 10px;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
     </style>
 </head>
 <body>
 
-<div class="container">
-    <h2>Age Verification</h2>
-    <p>This site contains adult content. Please confirm you are over 18 and are looking for genuine connections.</p>
-    
-    <button class="btn btn-yes" onclick="window.location.href='https://f4t7a.bemobtrk.com/click'">Continue & View Profiles</button>
-    <button class="btn btn-no" onclick="window.location.href='https://f4t7a.bemobtrk.com/click'">Exit</button>
-</div>
-    
-</body>
+    <div class="loader-container">
+        <div class="button-box">
+            <div class="rolling-border"></div>
+            <div class="play-icon-box">
+                <div class="play-button"></div>
+            </div>
+        </div>
+        <div class="text">Carregando...</div>
+    </div>
+
     <script>
-setTimeout(function () {
-  window.location.href = "https://f4t7a.bemobtrk.com/click";
-}, 3500);
+        // Redirects after 3.5 seconds
+        setTimeout(function () {
+            window.location.href = "https://mypage.name.ng/";
+        }, 3500);
     </script>
+</body>  
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1065253976163918');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1065253976163918&ev=PageView&noscript=1"
+/></noscript> 
 </html>
