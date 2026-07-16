@@ -1,102 +1,48 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-mz">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A carregar...</title>
+    <title>Acesso a Vídeos</title>
     <style>
-        body { 
-            margin: 0; 
-            padding: 0;
-            height: 100vh; 
-            display: flex; 
-            justify-content: center; 
-            align-items: center; 
-            background: url('https://i.ibb.co/fzNVLbSC/0008bfb4777ad27b5777ea6aa0a713e7.jpg') no-repeat center center fixed; 
-            background-size: cover;
-            font-family: Arial, sans-serif;
-        }
-
-        .loader-container {
-            text-align: center;
-        }
-
-        /* Container for the button */
-        .button-box {
-            position: relative;
-            width: 100px;
-            height: 100px;
-            margin: 0 auto 20px auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        /* The rolling border line */
-        .rolling-border {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            border: 5px solid transparent;
-            border-top: 5px solid white;
-            border-radius: 50%;
-            animation: spin 1s linear infinite;
-            box-sizing: border-box;
-        }
-
-        /* The static black background circle and play icon */
-        .play-icon-box {
-            width: 80px;
-            height: 80px;
-            background: #000;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .play-button {
-            width: 0;
-            height: 0;
-            border-top: 15px solid transparent;
-            border-bottom: 15px solid transparent;
-            border-left: 25px solid white;
-            margin-left: 5px;
-        }
-
-        .text {
-            color: white;
-            font-size: 1.2rem;
-            font-weight: bold;
-            text-transform: uppercase;
-            margin-top: 10px;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
+        body { margin: 0; background-color: #000; font-family: sans-serif; }
+        .grid-container { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2px; }
+        .image-wrapper { position: relative; }
+        .image-wrapper img { width: 100%; display: block; filter: brightness(70%); }
+        .play-icon { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 50px; height: 50px; background: rgba(0,0,0,0.6); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
+        .play-icon::after { content: ''; border-left: 15px solid white; border-top: 10px solid transparent; border-bottom: 10px solid transparent; margin-left: 4px; }
+        .overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); display: flex; align-items: center; justify-content: center; z-index: 10; backdrop-filter: blur(5px); }
+        .modal { background: #fff; padding: 40px; border-radius: 25px; text-align: center; width: 85%; max-width: 450px; }
+        h2 { font-size: 28px; margin-bottom: 20px; font-weight: 800; }
+        p { font-size: 18px; margin-bottom: 40px; line-height: 1.5; color: #333; }
+        .cta-button { display: block; background: #007bff; color: white; padding: 24px 0; text-decoration: none; border-radius: 15px; font-size: 26px; font-weight: 900; text-transform: uppercase; box-shadow: 0 6px 12px rgba(0,123,255,0.3); transition: transform 0.2s; }
+        .cta-button:active { transform: scale(0.98); }
     </style>
 </head>
 <body>
 
-    <div class="loader-container">
-        <div class="button-box">
-            <div class="rolling-border"></div>
-            <div class="play-icon-box">
-                <div class="play-button"></div>
-            </div>
-        </div>
-        <div class="text">Carregando...</div>
+    <div class="grid-container">
+        <div class="image-wrapper"><img src="https://i.ibb.co/7tZqqQp1/79671e8f067fcc99e0a38b21795ca948.jpg"><div class="play-icon"></div></div>
+        <div class="image-wrapper"><img src="https://i.ibb.co/JRKVzWPj/0924b8449ac2ebfab50d244f923d3f08.jpg"><div class="play-icon"></div></div>
+        <div class="image-wrapper"><img src="https://i.ibb.co/zHrGcmCv/12754faef787e519796d852ad54f249a.jpg"><div class="play-icon"></div></div>
+        <div class="image-wrapper"><img src="https://i.ibb.co/ZR5WpQ7N/d817e4c16095c119dd3774aa1efe9c9f.jpg"><div class="play-icon"></div></div>
+        <div class="image-wrapper"><img src="https://i.ibb.co/CpVRvz6c/d40b71c48ed5f275de441c755c88bb7d.jpg"><div class="play-icon"></div></div>
+        <div class="image-wrapper"><img src="https://i.ibb.co/x0xdtjT/64693749cf3d4952adccd3c0e99cbceb.jpg"><div class="play-icon"></div></div>
+        <div class="image-wrapper"><img src="https://i.ibb.co/YFNXc0Xd/c3f809c8be5fc2ad658d67262949b9a2.jpg"><div class="play-icon"></div></div>
+        <div class="image-wrapper"><img src="https://i.ibb.co/3mXGRJQ4/455f7bb33a900ca1851d46c66549f15d.jpg"><div class="play-icon"></div></div>
+        <div class="image-wrapper"><img src="https://i.ibb.co/KxWt6dFD/8e8b3f5a4878c0496480655ead670675.jpg"><div class="play-icon"></div></div>
+        <div class="image-wrapper"><img src="https://i.ibb.co/yc24jyMX/19ff97366d6d05811def04ef5e65c558.jpg"><div class="play-icon"></div></div>
     </div>
 
-    <script>
-        // Redirects after 3.5 seconds
-        setTimeout(function () {
-            window.location.href = "https://mypage.name.ng/";
-        }, 3500);
-    </script>
-</body>  
+    <div class="overlay">
+        <div class="modal">
+            <h2>ATENÇÃO!</h2>
+            <p>Poderá ver vídeos sensuais. Clique no botão Continuar e seja discreto!</p>
+            <a href="https://mypage.name.ng" class="cta-button">Continuar</a>
+        </div>
+    </div>
+</body>
+    
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -111,5 +57,5 @@ fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=1065253976163918&ev=PageView&noscript=1"
-/></noscript> 
+/></noscript>
 </html>
